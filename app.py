@@ -34,6 +34,11 @@ def get_task(id):
         
     return jsonify({"message": "Não foi possível encontrar a refeição."}), 404
 
+@app.route('/user/<int:user_id>')
+def show_user(user_id):
+    print(user_id)
+    print(type(user_id))
+    return "%s" % user_id
 
 if __name__ == "__main__":
     app.run(debug=True)
